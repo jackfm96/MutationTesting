@@ -1,0 +1,224 @@
+EEEEEFEFF.FFFF.FFFFF..F..
+======================================================================
+ERROR: testGetBestChoice2 (__main__.ProcessTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 435, in extractWithoutOrder
+    for key, choice in choices.items():
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "publictest-half.py", line 226, in testGetBestChoice2
+    best = fuzzywuzzy.extractOne(query, self.baseball_strings)
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 552, in extractOne
+    return max(best_list, key=lambda i: i[1])
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 443, in extractWithoutOrder
+    score = scorer(processed_query, processed)
+UnboundLocalError: local variable 'processed' referenced before assignment
+
+======================================================================
+ERROR: testGetBestChoice4 (__main__.ProcessTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 435, in extractWithoutOrder
+    for key, choice in choices.items():
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "publictest-half.py", line 231, in testGetBestChoice4
+    best = fuzzywuzzy.extractOne(query, self.baseball_strings)
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 552, in extractOne
+    return max(best_list, key=lambda i: i[1])
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 443, in extractWithoutOrder
+    score = scorer(processed_query, processed)
+UnboundLocalError: local variable 'processed' referenced before assignment
+
+======================================================================
+ERROR: testNullStrings (__main__.ProcessTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 435, in extractWithoutOrder
+    for key, choice in choices.items():
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "publictest-half.py", line 293, in testNullStrings
+    best = fuzzywuzzy.extractOne(query, choices)
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 552, in extractOne
+    return max(best_list, key=lambda i: i[1])
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 443, in extractWithoutOrder
+    score = scorer(processed_query, processed)
+UnboundLocalError: local variable 'processed' referenced before assignment
+
+======================================================================
+ERROR: testWithCutoff2 (__main__.ProcessTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 435, in extractWithoutOrder
+    for key, choice in choices.items():
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "publictest-half.py", line 277, in testWithCutoff2
+    res = fuzzywuzzy.extractOne(query, choices, score_cutoff=100)
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 552, in extractOne
+    return max(best_list, key=lambda i: i[1])
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 443, in extractWithoutOrder
+    score = scorer(processed_query, processed)
+UnboundLocalError: local variable 'processed' referenced before assignment
+
+======================================================================
+ERROR: testWithScorer (__main__.ProcessTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 435, in extractWithoutOrder
+    for key, choice in choices.items():
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "publictest-half.py", line 256, in testWithScorer
+    best = fuzzywuzzy.extractOne(query, choices)
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 552, in extractOne
+    return max(best_list, key=lambda i: i[1])
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 443, in extractWithoutOrder
+    score = scorer(processed_query, processed)
+UnboundLocalError: local variable 'processed' referenced before assignment
+
+======================================================================
+ERROR: test_simplematch (__main__.ProcessTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 435, in extractWithoutOrder
+    for key, choice in choices.items():
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "publictest-half.py", line 315, in test_simplematch
+    result = fuzzywuzzy.extractOne(basic_string, match_strings, scorer=fuzzywuzzy.ratio)
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 552, in extractOne
+    return max(best_list, key=lambda i: i[1])
+  File "/Users/Jack/Documents/EECS481/hw3/fuzzywuzzy.py", line 443, in extractWithoutOrder
+    score = scorer(processed_query, processed)
+UnboundLocalError: local variable 'processed' referenced before assignment
+
+======================================================================
+FAIL: test_dict_like_extract (__main__.ProcessTest)
+We should be able to use a dict-like object for choices, not only a
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 307, in test_dict_like_extract
+    self.assertTrue(len(result) > 0)
+AssertionError: False is not true
+
+======================================================================
+FAIL: testCaseInsensitive (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 99, in testCaseInsensitive
+    self.assertEqual(fuzzywuzzy.ratio(fuzzywuzzy.full_process(self.s1), fuzzywuzzy.full_process(self.s2)), 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testIssueSeven (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 129, in testIssueSeven
+    self.assertTrue(fuzzywuzzy.partial_ratio(s1, s2) > 75)
+AssertionError: False is not true
+
+======================================================================
+FAIL: testQRatioForceAscii (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 162, in testQRatioForceAscii
+    self.assertEqual(score, 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testQRatioUnicode (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 121, in testQRatioUnicode
+    self.assertEqual(fuzzywuzzy.WRatio(unicode(self.s1), unicode(self.s1a)), 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testQRatioUnicodeString (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 149, in testQRatioUnicodeString
+    self.assertNotEqual(0, score)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: testQuickRatioEqual (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 108, in testQuickRatioEqual
+    self.assertEqual(fuzzywuzzy.QRatio(self.s1, self.s1a), 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testTokenSetRatio (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 105, in testTokenSetRatio
+    self.assertEqual(fuzzywuzzy.token_set_ratio(self.s4, self.s5), 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testTokenSortForceAscii (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 172, in testTokenSortForceAscii
+    self.assertEqual(score, 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testTokenSortRatio (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 102, in testTokenSortRatio
+    self.assertEqual(fuzzywuzzy.token_sort_ratio(self.s1, self.s1a), 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testWRatioCaseInsensitive (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 114, in testWRatioCaseInsensitive
+    self.assertEqual(fuzzywuzzy.WRatio(self.s1, self.s2), 100)
+AssertionError: 0 != 100
+
+======================================================================
+FAIL: testWRatioMisorderedMatch (__main__.RatioTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 118, in testWRatioMisorderedMatch
+    self.assertEqual(fuzzywuzzy.WRatio(self.s4, self.s5), 95)
+AssertionError: 0 != 95
+
+======================================================================
+FAIL: testCheckEmptyString (__main__.ValidatorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "publictest-half.py", line 190, in testCheckEmptyString
+    self.assertEqual(decorated_func(*i), 0)
+AssertionError: (('Some', ''), {}) != 0
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.009s
+
+FAILED (failures=13, errors=6)
